@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F5F5F5;
+    color: #333333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.app-container {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    min-height: 200px;
+}
+
+.app-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+    font-family: inherit;
+}
+
+.task-input:focus {
+    border-color: #4A90D9;
+}
+
+.button {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    white-space: nowrap;
+}
+
+.button-add {
+    background-color: #4A90D9;
+    color: #FFFFFF;
+}
+
+.button-add:hover {
+    background-color: #3A7BC8;
+}
+
+.button-add:active {
+    transform: scale(0.97);
+}
+
+/* Controls Section */
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 0 4px;
+}
+
+.select-all-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.checkbox {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #4A90D9;
+}
+
+.select-all-label {
+    font-size: 14px;
+    color: #555555;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button-delete-completed {
+    background-color: #E74C3C;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    font-size: 13px;
+}
+
+.button-delete-completed:hover {
+    background-color: #C0392B;
+}
+
+.button-delete-completed:active {
+    transform: scale(0.97);
+}
+
+/* Tabs Section */
+.tabs-section {
+    display: flex;
+    border-bottom: 2px solid #E0E0E0;
+    margin-bottom: 16px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    cursor: pointer;
+    color: #777777;
+    transition: all 0.2s ease;
+    font-family: inherit;
+    text-align: center;
+}
+
+.tab-button:hover {
+    color: #4A90D9;
+}
+
+.tab-button.active {
+    color: #4A90D9;
+    border-bottom-color: #4A90D9;
+}
+
+.tab-count {
+    display: inline-block;
+    background-color: #E8F0FE;
+    color: #4A90D9;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-left: 4px;
+}
+
+.tab-button.active .tab-count {
+    background-color: #4A90D9;
+    color: #FFFFFF;
+}
+
+/* Task List */
+.task-list {
+    min-height: 60px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid #EEEEEE;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: #FAFAFA;
+    transition: all 0.2s ease;
+}
+
+.task-item:hover {
+    background-color: #F0F4FF;
+    border-color: #D0D8E8;
+}
+
+.task-item.completed {
+    background-color: #F9F9F9;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #B0B0B0;
+}
+
+.task-checkbox {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    cursor: pointer;
+    accent-color: #27AE60;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 15px;
+    color: #333333;
+    cursor: pointer;
+    word-break: break-word;
+    padding: 4px 0;
+    line-height: 1.4;
+}
+
+.task-text:hover {
+    color: #4A90D9;
+}
+
+.task-edit-input {
+    flex: 1;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 2px solid #4A90D9;
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    line-height: 1.4;
+}
+
+.button-delete-task {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #CCCCCC;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    line-height: 1;
+}
+
+.button-delete-task:hover {
+    color: #E74C3C;
+    background-color: #FDE8E8;
+}
+
+/* Pagination */
+.pagination-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #EEEEEE;
+}
+
+.pagination-button {
+    padding: 8px 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    color: #555555;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.pagination-button:hover {
+    background-color: #F0F4FF;
+    border-color: #4A90D9;
+    color: #4A90D9;
+}
+
+.pagination-button.active {
+    background-color: #4A90D9;
+    color: #FFFFFF;
+    border-color: #4A90D9;
+}
+
+.pagination-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-size: 13px;
+    color: #999999;
+    padding: 0 8px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #BBBBBB;
+    font-size: 15px;
+}
+
+/* Connection Status */
+.connection-status {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.connection-status.connected {
+    color: #27AE60;
+}
+
+.connection-status.disconnected {
+    color: #E74C3C;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 20px 16px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    .button-add {
+        width: 100%;
+    }
+
+    .controls-section {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .tab-button {
+        font-size: 13px;
+        padding: 10px 4px;
+    }
+}

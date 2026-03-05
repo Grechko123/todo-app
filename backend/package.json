@@ -1,0 +1,13 @@
+{
+  "name": "todo-backend",
+  "version": "1.0.0",
+  "description": "Backend для TODO-приложения (Node.js + Express + SQLite)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "better-sqlite3": "^9.4.3"
+  }
+}

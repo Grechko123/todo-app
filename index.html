@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon_atoms.ico" type="image/x-icon">
+    <title>TODO Приложение</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <h1 class="app-title">📝 TODO Приложение</h1>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" class="task-input" placeholder="Введите задачу..." maxlength="250">
+            <button id="addTaskButton" class="button button-add">Добавить</button>
+        </div>
+
+        <div class="controls-section">
+            <div class="select-all-wrapper">
+                <input type="checkbox" id="selectAllCheckbox" class="checkbox">
+                <label for="selectAllCheckbox" class="select-all-label">Выбрать все</label>
+            </div>
+            <button id="deleteCompletedButton" class="button button-delete-completed">Удалить выполненные</button>
+        </div>
+
+        <div class="tabs-section">
+            <button class="tab-button active" data-filter="all">
+                Все <span id="countAll" class="tab-count">0</span>
+            </button>
+            <button class="tab-button" data-filter="active">
+                Активные <span id="countActive" class="tab-count">0</span>
+            </button>
+            <button class="tab-button" data-filter="completed">
+                Завершённые <span id="countCompleted" class="tab-count">0</span>
+            </button>
+        </div>
+
+        <div id="taskList" class="task-list"></div>
+
+        <div id="pagination" class="pagination-section"></div>
+
+        <div class="connection-status" id="connectionStatus"></div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
